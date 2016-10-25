@@ -2,4 +2,5 @@
 .gradle/
 .settings/
 .classpath
+.idea/
 bin/
