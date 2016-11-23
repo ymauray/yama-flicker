@@ -36,8 +36,9 @@ public class FixPhotos implements CommandLineRunner {
 					logger.info("Updating photo #" + id + ", title => " + dateTaken);
 					flickrService.setPhotoMeta().forPhoto(id).withTitle(dateTaken).post();
 				}
+			} else {
+				logger.warn(String.format("Photo #%s does not have a 'date taken'", id));
 			}
-
 		});
 	}
 }
